@@ -479,7 +479,7 @@ def text_router(m):
     elif t=="📦 مشترياتي": my_purchases(m)
     elif t=="ℹ️ المساعدة": help_cmd(m)
 
-@app.callback_query_handler(func=lambda q: True)
+@bot.callback_query_handler(func=lambda q: True)
 def unknown_callback(q):
     try: bot.answer_callback_query(q.id)
     except Exception: pass
